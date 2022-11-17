@@ -1,0 +1,26 @@
+
+
+#title-text { 
+    text-align: center;
+    color: white;  
+}
+
+#greeting-div {
+    text-align: center;
+    position: relative;
+    margin-top: 20vh;
+}
+
+#greeting-div p {
+    font-weight: bold;
+    font-size: 40px;
+    display: inline;
+}
+
+#button-row {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+}

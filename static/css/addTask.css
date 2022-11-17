@@ -1,0 +1,16 @@
+p{
+    font-size: 30px;
+    color:white;
+    width:100%;
+    font-weight: 600;
+}
+
+a{
+    color:#E1849F;
+}
+
+task-page{
+    position: absolute;
+    justify-content: center;
+}
+

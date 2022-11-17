@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<h1 class="logo" id="top-left-logo">Todo</h1>
+<img src="/static/assets/images/peeking_bunny.png" id="peeking-bunny" />
+<div class="center-children">
+    <h1 id="login-title">Login</h1>
+
+    <form id="login-form" method="POST" action="" class="input-form">
+        {{ form.hidden_tag() }}
+        {{ form.username }}
+        {{ form.password }}
+        {{ form.submit }}
+    </form>
+
+    <a id="register-request" href="{{url_for('register')}}">Don't have an account? Sign up here!</a>
+</div>
+
+{% endblock %}
