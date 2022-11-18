@@ -1,3 +1,15 @@
+#appbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#appbar span {
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
 p{
     font-size: 30px;
     color:white;
@@ -5,12 +17,44 @@ p{
     font-weight: 600;
 }
 
-a{
+
+#todo-table a {
     color:#E1849F;
 }
 
-task-page{
-    position: absolute;
-    justify-content: center;
+form {
+    margin-top: 30px;
+    flex-direction: column;
+    display: flex;
+    width: 350px;
+    gap: 10px;
 }
 
+form input[type="submit"] {
+    outline: none;
+    border: none;
+}
+
+form #content-field {
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+form #content-field:focus {
+    border: none;
+    outline: 2px solid #E1849F;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title-div {
+    display: flex;
+    align-items: start;
+    justify-items: start;
+}

@@ -5,38 +5,48 @@
 {% endblock %}
 
 {% block body %}
-<h1 class="logo" id="top-left-logo">Todo</h1>
-<a href="{{url_for('logout')}}">Press here to log out!</a>
-<div class="task-page">
-    <div class="content">
-        {% if tasks|length < 1 %}
-        <p>Hey<br>What do you want to do today?</p>
-        {% else %}
+<div id="appbar">
+    <h1 class="logo" id="top-left-logo">Todo</h1>
+    <span>
+        <a class="default-button-white" href="{{url_for('logout')}}">Log out</a>
+    </span>   
+</div>
 
-        <table>
-            <tr>
-                <th>Task</th>
-                <th>Added</th>
-                <th>Actions</th>
-            </tr>
-            {% for task in tasks %}
-                <tr>
-                    <td>{{ task.content }}</td>
-                    <td>{{ task.date_created.date() }}</td>
-                    <td>
-                        <a href="/delete/{{task.id}}">Delete</a>
-                        <br>
-                        <a href="/update/{{task.id}}">Update</a>
-                    </td>
-                </tr>
-            {% endfor %}
-        </table>
-        {% endif %}
 
-        <form action="{{url_for('addTask')}}" method="POST">
-            <input type="text" name="content" id="content">
-            <input type="submit" value="Add">
-        </form>
+<div class="content">
+    {% if tasks|length < 1 %}
+    <div id="title-div">
+        <p>Hey! <br>What do you want to do today?</p>
     </div>
+    {% else %}
+
+    <table id="todo-table">
+        <tr>
+            <th>Task</th>
+            <th>Added</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+            <tr>
+                <td>
+                    <div id="content-show">{{ task.content }}</div>
+                    </td>
+                <td>{{ task.date_created.date() }}</td>
+                <td>
+                    <a href="/delete/{{task.id}}">Delete</a>
+                    <br>
+                    <a href="/update/{{task.id}}">Update</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+
+    <form action="{{url_for('addTask')}}" method="POST">
+        <textarea type="text" name="content" id="content-field" min="2" required></textarea>
+        <input class="default-button" type="submit" value="Add">
+    </form>
+
+
 </div>
 {% endblock %}
