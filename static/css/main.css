@@ -100,4 +100,21 @@ td {
     margin-left:10px;
 }
 
+.flashes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0px;
+    color: white;
+    width: 100%;
+    background-color: 	rgba(220,20,60, 1.0);
+    height: 50px;
+}
+
+.flashes p {
+    
+    font-size: 20px;
+}
 
